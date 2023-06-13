@@ -1,0 +1,16 @@
+name: Checkout Demo
+on: [push]
+jobs:
+  run-github-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files
+        run: |
+          pwd
+          ls -la
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: List files after checkout
+        run: |
+          pwd
+          ls -la
